@@ -1,4 +1,14 @@
-.game-Container {
+.gridContainer {
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+}
+
+.gameContainer {
+    text-align: center;
+}
+
+.startButton {
+    padding: 10px;
+    margin: 10px;
 }

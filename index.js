@@ -1,16 +1,20 @@
-let gameContainer = document.querySelector(".game-Container")
+let gridContainer = document.querySelector(".gridContainer")
 
-for (let i = 0; i < 16; i++) {
-    let currentRow = document.createElement("div")
-    gameContainer.appendChild(currentRow)
-    for (let j = 0; j < 16; j++) {
-        let currentDivSquare = document.createElement("div")
-        currentDivSquare.style.width = "50px"
-        currentDivSquare.style.height = "50px"
-        currentDivSquare.style.backgroundColor = "green"
 
-        currentRow.appendChild(currentDivSquare)
+createGrid(16)
+
+function createGrid(grid_size) {
+    let squareSize = (800/grid_size)
+
+    for (let i = 0; i < grid_size; i++) {
+        let currentRow = document.createElement("div")
+        gridContainer.appendChild(currentRow)
+        for (let j = 0; j < grid_size; j++) {
+            let currentDivSquare = document.createElement("div")
+            currentDivSquare.style.width = squareSize + "px"
+            currentDivSquare.style.height = squareSize + "px"
+            currentDivSquare.style.backgroundColor = "green"
+            currentRow.appendChild(currentDivSquare)
+        }
     }
 }
-
-
